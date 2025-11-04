@@ -28,7 +28,6 @@ JOIN Employees AS Subordinates ON Employees.employeeid = Subordinates.managerid
 GROUP BY Employees.employeeid, Employees.first_name, Employees.last_name
 HAVING COUNT(Subordinates.employeeid) > 3;
 
-
 #3. Determine departments with the highest product variety based on aisle assignments
 SELECT 
     Department.department_name,
@@ -53,7 +52,6 @@ JOIN Employees ON Department.departmentid = Employees.departmentid
 JOIN Department_has_Aisle ON Department.departmentid = Department_has_Aisle.Department_departmentid
 JOIN Aisle ON Department_has_Aisle.Aisle_aisle_num = Aisle.aisle_num
 GROUP BY Store.idStore;
-
 
 #5. Find suppliers whose products are placed in the highest number of aisles across all stores
 SELECT 

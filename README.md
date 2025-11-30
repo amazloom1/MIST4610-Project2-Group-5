@@ -176,7 +176,12 @@ ORDER BY total_aisles_stocked DESC;
 ---
 
 ##  Visualizations
-![Visualizations](Tableau Visualizations.png)
+![View Image](SupplierLocations.png)
+![View Image](AisleInformationVisualization.png)
+[![View My Tableau Dashboard](TableauVisualizations.png)](https://us-east-1.online.tableau.com/#/site/jnl63774-f8235c8c77/views/Group5Project2/Dashboard1?:iid=4)
+
+Please click on the image to get redirected to the Tableau page
+
 ---
 
 ##  Summary

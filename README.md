@@ -272,6 +272,18 @@ Supplier Locations
 
 Please click on the image to get redirected to the Tableau page
 
+### Visualization Analysis & Importance
+
+The Employee Wages visualization highlights wage distribution across different hire years and departments, making it easy for managers to identify compensation patterns and potential discrepancies. By presenting wages visually rather than through raw tables, this chart helps uncover trends such as departments with consistently higher wages, shifts in hiring costs over time, or employees whose pay may be misaligned with similar roles. This supports more informed decisions around budgeting, raises, and staffing allocations.
+
+The Aisle Capacity and Aisle Information charts provide a clear view of how store space is used across departments. By visualizing the capacity of each aisle, managers can quickly identify high-demand areas that may require more frequent stocking, as well as underutilized aisles that could be reorganized or repurposed. These insights are essential for optimizing store layouts, improving customer flow, and ensuring that products are placed where they are most accessible and effective.
+
+The Supplier’s Products visualization shows how many products each supplier contributes to the store, enabling leadership to easily compare vendor impact. This helps identify key suppliers, evaluate product diversity, and detect whether the store is overly reliant on a small number of vendors. Understanding these relationships is valuable for negotiating contracts, strengthening partnerships, and planning for more resilient sourcing strategies.
+
+Finally, the Supplier Locations map adds a geographic layer to supplier analysis by showing where vendors are physically located. This context is crucial for understanding delivery times, potential shipping delays, and regional supply chain risks. It also helps managers diversify sourcing across different regions rather than relying too heavily on suppliers from the same area.
+
+Together, these visualizations turn complex relational data into intuitive insights that support operational efficiency, strategic planning, and informed decision-making throughout the retail organization.
+
 ---
 
 ##  Summary

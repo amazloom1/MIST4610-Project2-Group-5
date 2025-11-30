@@ -19,7 +19,7 @@ This database provides the foundation for operational efficiency, workforce mana
 
 ##  Data Model
   
-![Data Model](Database.png)
+![Data Model](DatabaseUpdated.png)
 
 **Data Model**
 

@@ -179,7 +179,7 @@ ORDER BY total_aisles_stocked DESC;
 ---
 
 
-
+<script type='module' src='https://us-east-1.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'></script><tableau-viz id='tableau-viz' src='https://us-east-1.online.tableau.com/t/jnl63774-f8235c8c77/views/Group5Project2/Dashboard1' width='1000' height='840' hide-tabs toolbar='bottom' ></tableau-viz>
 
 
 

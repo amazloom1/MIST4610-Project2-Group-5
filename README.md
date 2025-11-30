@@ -118,8 +118,13 @@ HAVING
     AVG(Employees.hourly_wage) > Store_Averages.store_avg_wage;
 ```
 **Description**: 
-- Helps store or regional managers identify departments that are paying higher wages than the store average, which can inform labor budgeting decisions and salary restructuring 
-
+- This query compares each department’s average hourly wage to the overall store average. It identifies departments where employee wages are higher than the norm. This supports labor cost monitoring and helps managers understand which departments may require closer salary review or restructuring.
+  
+**Justification**:
+- Highlights departments that contribute disproportionately to labor expenses.
+- Helps managers make informed decisions about budgeting, wage adjustments, and staffing levels.
+- Supports financial planning by identifying areas that may impact store profitability.
+  
 ### 2. Identify employees who supervise more than 3 employees across multiple departments
 ```sql
 SELECT 
@@ -140,8 +145,13 @@ HAVING
     AND COUNT(DISTINCT Subordinates.departmentid) > 1;
 ```
 **Description**:
-- Helps identify managers with large teams, which could indicate high responsibility, potential burnout, or need for assistant managers.
+- This query identifies managers who oversee more than three employees and whose teams span multiple departments. It provides a clear view of employee supervision workload and helps determine organizational hierarchy and role distribution.
 
+**Justification**:
+- Identifies managers carrying heavier or more complex workloads.
+- Helps assess whether responsibilities are balanced across leadership staff.
+- Supports HR decisions regarding promotions, support staffing, or redistribution of responsibilities.
+  
 ### 3. Determine departments with the highest product variety based on aisle assignments
 ```sql
 SELECT
@@ -167,7 +177,12 @@ FROM (
 ORDER BY DeptVariety.total_product_categories DESC;
 ```
 **Description**: 
--  Shows which departments offer the greatest variety of product types, helping managers evaluate space allocation, merchandising strategies, and inventory complexity.
+-  This query determines which departments have the highest number of distinct product categories based on aisle assignments. It highlights departments offering the broadest product selection and shows how merchandise variety is distributed across the store.
+
+**Justification**:
+- Helps evaluate which departments require more space, attention, or resources.
+- Assists in planning merchandising, product placement, and store layout strategies.
+- Provides insights into inventory complexity, helping prevent overcrowding or shortages.
 
 ### 4. Calculate store productivity: Number of employees per aisle
 ```sql
@@ -199,7 +214,12 @@ JOIN (
     ON Aisle_Count.storeid = Store.idStore;
 ```
 **Description**: 
-- Measures staffing efficiency. Stores with high employees-per-aisle may be overstaffed; low ratios may indicate understaffing and customer service risk.
+- This query calculates productivity by dividing the total number of employees in each store by the number of aisles assigned to its departments. It measures how labor resources are distributed relative to the store’s physical structure.
+
+**Justification**:
+- Identifies stores that may be understaffed or overstaffed.
+- Supports staffing and scheduling decisions to improve operational efficiency.
+- Provides a baseline metric for comparing productivity across different store locations.
 
 ### 5. Find suppliers whose products are placed in the highest number of aisles across all stores
 ```sql
@@ -234,7 +254,12 @@ HAVING
     );
 ```
 **Description**: 
--  Shows which suppliers have the widest in-store presence. Useful for negotiating contracts, prioritizing strong partners, or identifying overdependence on one supplier.
+- This query finds the supplier(s) whose products appear in the most distinct aisles across all stores. It identifies suppliers with the widest product reach, showing which vendors contribute most heavily to product distribution.
+
+**Justification**:
+- Highlights key supplier relationships and helps evaluate vendor performance.
+- Informs contract negotiations, sourcing priorities, and potential partnership opportunities.
+- Reveals supplier dominance or reliance, supporting diversification and risk mitigation strategies.
 
 ---
 

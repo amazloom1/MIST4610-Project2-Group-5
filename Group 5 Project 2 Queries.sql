@@ -27,7 +27,7 @@ GROUP BY
 HAVING 
     AVG(Employees.hourly_wage) > Store_Averages.store_avg_wage;
 
-#2. Identify employees who supervise more than 3 employees across multiple departments
+#2. Identify employees who supervise more than the average amount of employees per department
 SELECT 
     Employees.employeeid AS manager_id,
     Employees.first_name,

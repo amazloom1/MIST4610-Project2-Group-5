@@ -125,7 +125,7 @@ HAVING
 - Helps managers make informed decisions about budgeting, wage adjustments, and staffing levels.
 - Supports financial planning by identifying areas that may impact store profitability.
   
-### 2. Identify employees who supervise more than 3 employees across multiple departments
+### 2. Identify employees who supervise more than the average amount of employees per department
 ```sql
 SELECT 
     Employees.employeeid AS manager_id,
@@ -154,7 +154,7 @@ HAVING
     );
 ```
 **Description**:
-- This query identifies managers who oversee more than three employees and whose teams span multiple departments. It provides a clear view of employee supervision workload and helps determine organizational hierarchy and role distribution.
+- This query identifies managers who oversee more than the average in relation to other managers. It provides a clear view of employee supervision workload and helps determine organizational hierarchy and role distribution.
 
 **Justification**:
 - Identifies managers carrying heavier or more complex workloads.

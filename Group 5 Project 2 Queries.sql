@@ -42,8 +42,17 @@ GROUP BY
     Employees.first_name,
     Employees.last_name
 HAVING 
-    COUNT(Subordinates.employeeid) > 3
-    AND COUNT(DISTINCT Subordinates.departmentid) > 1;
+    COUNT(Subordinates.employeeid) > 
+		(SELECT AVG(sub_count)
+        FROM (
+            SELECT 
+                COUNT(Subordinates.employeeid) AS sub_count
+            FROM Employees
+            JOIN Employees AS Subordinates
+                ON Employees.employeeid = Subordinates.managerid
+            GROUP BY Employees.employeeid
+        ) AS avg_subordinate_counts
+    );
 
 #3. Determine departments with the highest product variety based on aisle assignments
 SELECT

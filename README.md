@@ -141,8 +141,17 @@ GROUP BY
     Employees.first_name,
     Employees.last_name
 HAVING 
-    COUNT(Subordinates.employeeid) > 3
-    AND COUNT(DISTINCT Subordinates.departmentid) > 1;
+    COUNT(Subordinates.employeeid) > 
+		(SELECT AVG(sub_count)
+        FROM (
+            SELECT 
+                COUNT(Subordinates.employeeid) AS sub_count
+            FROM Employees
+            JOIN Employees AS Subordinates
+                ON Employees.employeeid = Subordinates.managerid
+            GROUP BY Employees.employeeid
+        ) AS avg_subordinate_counts
+    );
 ```
 **Description**:
 - This query identifies managers who oversee more than three employees and whose teams span multiple departments. It provides a clear view of employee supervision workload and helps determine organizational hierarchy and role distribution.
